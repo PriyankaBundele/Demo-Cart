@@ -1,5 +1,7 @@
 package PageObjectModel1;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,6 +22,10 @@ public class FooterPageObject {
 	private By ReturnsTeleph = By.xpath("//input[@id='input-telephone']");
 	private By orderId = By.xpath("//input[@id='input-order-id']");
 	private By SelectCalender = By.xpath("//button[@class='btn btn-default']");
+	private By NextMonthclick=By.xpath("(//th[@class='next'])[1]");
+	private By Monthandyear=By.xpath("(//th[@class='picker-switch'])[1]");
+	private By datesSelect=By.xpath("//td[@class='day']");
+	
 	private By Cliyesforreturn = By.xpath("(//input[@type='radio'])[6]");
 	
 	private By returnenquiry = By.xpath("//textarea[@placeholder='Faulty or other details']");
@@ -68,6 +74,19 @@ public class FooterPageObject {
 
 		return driver.findElement(SelectCalender);
 	}
+	public WebElement NextMonthclick1() {
+
+		return driver.findElement(NextMonthclick);
+	}
+	public WebElement Monthandyear() {
+
+		return driver.findElement(Monthandyear);
+	}
+	public List <WebElement> datesSelect() {
+
+		return driver.findElements(datesSelect);
+	}
+	
 
 	public WebElement Cliyesforreturn() {
 

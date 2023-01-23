@@ -19,6 +19,6 @@ public class Constants {
 	public static String warningMessage = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
 	public static String addcartRadiopass = "amount macthing succussfully";
 	public static String addcartRadiofail = "amount not matching succussfully";
-
+	public static String MonthandYear = "April 2024";
 
 }

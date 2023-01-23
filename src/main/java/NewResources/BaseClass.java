@@ -14,8 +14,10 @@ public class BaseClass {
 	public WebDriver driver;
 
 	public void browserInitialization() throws IOException {
-		FileInputStream fis = new FileInputStream(
-				"C:\\Users\\PRIYANKA\\eclipse-workspace\\DemoCartPractice\\src\\main\\java\\NewResources\\data.properties");
+		
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\NewResources\\data.properties");
+	
+		//"//C:\\Users\\PRIYANKA\\eclipse-workspace\\DemoCartPractice\\src\\main\\java\\NewResources\\data.properties");
 		Properties rsc = new Properties();
 		rsc.load(fis);
 		String StoreBrowser = rsc.getProperty("browser");
@@ -32,7 +34,7 @@ public class BaseClass {
 		}
 	}
 
-	@BeforeMethod()
+	@BeforeMethod
 	public void BrowserOpen() throws IOException {
 
 		browserInitialization();
